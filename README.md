@@ -46,3 +46,16 @@ Once you have confirmed that the application runs in the local environment and t
 ## Summary
 Deploying a Flask application to the cloud is a relatively simple task. Start by setting up the environment variables as specified in the .example.env file, then deploy using a cloud hosting provider's documentation. Enjoy using chatbot-whatsapp!
 
+
+# WhatsApp Usage
+
+## Sending Messages
+To send messages to the chatbot, send a message to the WhatsApp number associated with the chatbot. The message should be sent from the phone number specified in the environment variable `AUTHORIZED_PHONE_NUMBER`. The message should be sent in the following format:
+
+`<message>`
+
+## Generating Images
+To generate images for messages, send a message to the WhatsApp number associated with the chatbot. The message should be sent from the phone number specified in the environment variable `AUTHORIZED_PHONE_NUMBER`. The message should be sent in the following format:
+
+`/image <message>`
+
