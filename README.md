@@ -26,6 +26,9 @@ Before getting started, make sure you have the following:
 Environment variables required for the application can be found in the `.example.env` file. Make sure to define these values before deploying the application. Once you have configured all of the environment variables, save them to a `.env` file. This file should then be added to the root of the application.
 
 ### Environment Variables Description
+
+* *OPENAI_API_KEY* - This is the API key for accessing the OpenAI API. This is used to generate messages from the chatbot.
+
 * *WHATSAPP_PHONE_NUMBER_ID* - This is the unique phone number ID provided by WhatsApp Business API in Facebook Developer Portal after registering the phone number.
 
 * *WHATSAPP_API_KEY* - This is the API key for accessing the WhatsApp account. Also known as ACCESS_TOKEN in the Facebook Developer Portal.
@@ -35,7 +38,7 @@ Environment variables required for the application can be found in the `.example
 * *WHATSAPP_VERIFY_TOKEN* - This is a secret token used to authenticate the access to the chatbot.
 
 ## Note
-> Your WhatsApp Business API account must be registered for webhooks. The webhook URL should be set to the URL of the deployed application. The webhook event `messages` must be subscribed.
+> Your WhatsApp Business API account must be registered for webhooks. The webhook URL should be set to the URL of the deployed application with verify token same as the one defined in the environment variable `WHATSAPP_VERIFY_TOKEN`. The webhook event `messages` must be subscribed.
 
 ## Deploying
 Once you have confirmed that the application runs in the local environment and that all environment variables are properly set, you are ready to deploy the application in the cloud. Using a hosting service such as Heroku, follow the provider’s documentation to deploy the application.
